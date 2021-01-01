@@ -169,6 +169,41 @@ const animationTimeline = () => {
       0.2,
       "+=1"
     )
+    .from(".idea-7", 0.7, ideaTextTrans)
+    .to(".idea-7", 0.7, ideaTextTransLeave, "+=1.5")
+    .from(".idea-8", 0.7, ideaTextTrans)
+    .to(".idea-8", 0.7, ideaTextTransLeave, "+=1.5")
+    .from(
+      ".idea-9",
+      0.7,
+      {
+        rotationX: 15,
+        rotationZ: -10,
+        skewY: "-5deg",
+        y: 50,
+        z: 10,
+        opacity: 0
+      },
+      "+=0.5"
+    )
+    .to(
+      ".idea-9 span",
+      0.7,
+      {
+        rotation: 90,
+        x: 8
+      },
+      "+=0.4"
+    )
+    .to(
+      ".idea-9",
+      0.7,
+      {
+        scale: 0.2,
+        opacity: 0
+      },
+      "+=2"
+    )
     .staggerFromTo(
       ".baloons img",
       2.5,
